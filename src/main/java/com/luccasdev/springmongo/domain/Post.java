@@ -66,7 +66,7 @@ public class Post {
 	
 	
 
-	public User getAuthor() {
+	public AuthorDTO getAuthor() {
 		return author;
 	}
 
