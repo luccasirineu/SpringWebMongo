@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.luccasdev.springmongo.domain.Post;
 import com.luccasdev.springmongo.domain.User;
 import com.luccasdev.springmongo.dto.UserDTO;
 import com.luccasdev.springmongo.services.UserService;
@@ -66,6 +67,10 @@ public class UserResource {
 		return ResponseEntity.noContent().build();
 	}
 
-	
+	@GetMapping(value="/{id}/posts")
+	public ResponseEntity<List<Post>> findPosts(@PathVariable String id) { //Path variable serve para casar o id do argumento com o id da url		
+		User obj = service.findById(id); 
+		return ResponseEntity.ok().body(obj.getPosts());
+	}
 
 }
