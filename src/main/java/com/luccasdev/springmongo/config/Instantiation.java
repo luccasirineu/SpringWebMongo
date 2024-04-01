@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.luccasdev.springmongo.domain.Post;
 import com.luccasdev.springmongo.domain.User;
+import com.luccasdev.springmongo.dto.AuthorDTO;
 import com.luccasdev.springmongo.repositories.PostRepository;
 import com.luccasdev.springmongo.repositories.UserRepository;
 
@@ -38,8 +39,8 @@ public class Instantiation implements CommandLineRunner{
 		userRepository.saveAll(Arrays.asList(maria, alex, bob));
 		
 		
-		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para sp, abs!", maria);
-		Post post2 = new Post(null, sdf.parse("27/03/2018"), "Voltando de  viagem", "Vou voltar para cs, abs!", maria);
+		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para sp, abs!", new AuthorDTO(maria));
+		Post post2 = new Post(null, sdf.parse("27/03/2018"), "Voltando de  viagem", "Vou voltar para cs, abs!", new AuthorDTO(maria));
 		postRepository.saveAll(Arrays.asList(post1, post2));
 		
 	}
