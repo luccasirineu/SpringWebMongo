@@ -4,7 +4,7 @@
 # Sobre o projeto
 
 
-Spring Web Service é uma aplicação back end, na qual teremos o Post, Usuário e Comentario, fazendo interações, aninhamentos e operações de CRUD(Create, Read, Update, Delete) entre eles. 
+Spring Web Mongo é uma aplicação back end, na qual teremos o Post, Usuário e Comentario, fazendo interações, aninhamentos e operações de CRUD(Create, Read, Update, Delete) entre eles. 
 
 
 ## Objetivos
